@@ -1,4 +1,7 @@
 # REF: https://docs.juliahub.com/CalculusWithJulia/AZHbv/0.0.5/ODEs/euler.html
+# sol1: dy/dt = -ky(t)
+# sol2: dy/dt = 3e**-t
+# sol3: dy/dt = -(t-1)y(t)/2
 
 using Plots
 
