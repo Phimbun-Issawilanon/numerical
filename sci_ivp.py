@@ -11,7 +11,7 @@ def func2(t,y):
     return dydt
 
 def func3(t,y):
-    dydt = 0.5 * (t-1) * y
+    dydt = -0.5 * (t-1) * y
     return dydt
 
 # equation 1) y' = -0.3*y, y0=1
