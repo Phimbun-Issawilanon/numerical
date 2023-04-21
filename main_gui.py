@@ -282,9 +282,6 @@ class Ui_MainWindow(object):
 "background-color: rgb(225, 225, 225);\n"
 "border-radius: 10px;")
         self.groupBox_result.setObjectName("groupBox_result")
-        #self.graphicsView = QtWidgets.QGraphicsView(self.groupBox_result)
-        #self.graphicsView.setGeometry(QtCore.QRect(770, 60, 441, 231))
-        #self.graphicsView.setObjectName("graphicsView")
         self.gridLayoutWidget_2 = QtWidgets.QWidget(self.groupBox_result)
         self.gridLayoutWidget_2.setGeometry(QtCore.QRect(80, 60, 371, 211))
         self.gridLayoutWidget_2.setObjectName("gridLayoutWidget_2")
@@ -351,10 +348,6 @@ class Ui_MainWindow(object):
         self.horizontalLayout_9.addWidget(self.label_time_1st)
         self.horizontalLayout_9.setStretch(1, 2)
         self.gridLayout_2.addLayout(self.horizontalLayout_9, 1, 1, 1, 1)
-        #self.total_graph = QtWidgets.QGraphicsView(self.groupBox_result)
-        #self.total_graph.setGeometry(QtCore.QRect(550, 40, 361, 221))
-        #self.total_graph.setStyleSheet("color: rgb(255, 255, 255);")
-        #self.total_graph.setObjectName("total_graph")
         self.total_graph = QtWidgets.QLabel(self.groupBox_result)
         self.total_graph.setGeometry(QtCore.QRect(500, 20, 381, 241))
         self.total_graph.setObjectName("total_graph")
@@ -495,17 +488,11 @@ class Ui_MainWindow(object):
             self.graph = QPixmap("C:\\Users\\admin\\Desktop\\numeric project\\my_project\\graph_pic.png")
             self.total_graph.setPixmap(self.graph)
 
-            # ---------- sort time & library-----------------------------------
+            # ---------- show result time & library-----------------------------------
             self.show_result(equation, time1, time2, time3, lib1, lib2, lib3)
 
     def plot_graph(self, ts, y1, y2, y3, lib1, lib2, lib3):
         import matplotlib.pyplot as plt
-        print(list(y1))
-        print(len(y1))
-        print(list(y2))
-        print(len(y2))
-        print(list(y3))
-        print(len(y3))
         plt.figure(figsize = (4.2, 2.5))
         if lib1 != "Python: SymPy":
             plt.plot(ts, list(y1), label=str(lib1))
@@ -516,7 +503,6 @@ class Ui_MainWindow(object):
         plt.ylabel('f(t)')
         plt.legend()
         plt.savefig("c:\\Users\\admin\\Desktop\\numeric project\\my_project\\graph_pic.png")
-        #plt.show()
 
     def calculate_ode(self, ode_method, eq_id, lib, ts, ys):
         # ---------- call func calculate ode ---------------------
